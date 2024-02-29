@@ -3,7 +3,7 @@ Generate files for github reports
 
 Example of the file generated:
 ```
-CORE 2024-02-01..2024-02-29
+YOUR_REPOSITORY 2024-02-01..2024-02-29
 
 PR COUNT:
 Das_pistas: 6

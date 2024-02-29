@@ -1,7 +1,45 @@
-# github-report
-Generate files for github reports
+# GitHub Report Generator
 
-Example of the file generated:
+This script generates a report for a GitHub repository, including various statistics such as pull request count, commit count, lines added/deleted, and pull request change requests. The report is based on data retrieved from the GitHub API.
+
+## Installation
+
+Before using the script, ensure you have Python installed on your machine. Additionally, you'll need to install the GitHub CLI (gh) using the following command:
+
+```powershell
+snap install gh
+```
+
+After installing gh, authenticate with your GitHub account using the following command:
+
+```powershell
+gh auth login
+```
+
+## Usage
+
+Run the script with the following command:
+
+```powershell
+python3 gh_report.py REPO_OWNER REPO_NAME "DATE_RANGE"
+```
+
+## Where:
+
+- REPO_OWNER is the owner or organization of the repository.
+- REPO_NAME is the name of the repository.
+- DATE_RANGE is the date range for which the report will be generated. This should be in the format "YYYY-MM-DD..YYYY-MM-DD".
+
+## Example
+
+```powershell
+python3 gh_report.py AGX-Software indiky-server "2024-05-01..2024-05-31"
+```
+
+## Output
+
+The script generates a report similar to the following example:
+
 ```
 YOUR_REPOSITORY 2024-02-01..2024-02-29
 
@@ -53,37 +91,8 @@ jack: 1
 TOTAL: 8
 ```
 
-This code depends on git hub api and python. Ensure your machine have both installed
-DOCS: https://cli.github.com/manual/gh_api
+## Notes
 
-First install gh api
-
-```powershell
-snap install gh
-```
-
-After you install, login in gh with the command
-
-```powershell
-gh auth login
-```
-
-After you finish the authentication you are read to go.
-
-Command example:
-
-```powershell
-python3 gh_report.py AGX-Software indiky-server "2024-05-01..2024-05-31"
-```
-
-"""
-    Argswith open(file_name, 'w') as file:
-    # Write the content to the file
-    file.write(content):
-        repo_owner (str): The owner or organization of the repository.
-        repo_name (str): The name of the repository.
-        date (str): The date range which the report will be generated. Should be a date range following the example 2024-05-01..2024-05-31
-
-    example: python3 gh_report.py AGX-Software indiky-server "2024-05-01..2024-05-31"
-    example 2: python3 gh_report.py AGX-Software indiky-web "2024-05-01..2024-05-31"
-"""
+- Ensure you have the necessary permissions to access the repository.
+- The script depends on the GitHub API and Python. Make sure both are installed and configured correctly.
+- For more information on the GitHub CLI and API, refer to the official documentation.

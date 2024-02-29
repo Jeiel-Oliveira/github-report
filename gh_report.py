@@ -155,6 +155,16 @@ class GenerateReport:
         file.write("\n")
         file.write("\n")
 
+"""
+    Argswith open(file_name, 'w') as file:
+    # Write the content to the file
+    file.write(content):
+        repo_owner (str): The owner or organization of the repository.
+        repo_name (str): The name of the repository.
+        date (str): The date range which the report will be generated. Should be a date range following the example 2024-05-01..2024-05-31
 
+    example: python3 gh_report.py AGX-Software indiky-server "2024-05-01..2024-05-31"
+    example 2: python3 gh_report.py AGX-Software indiky-web "2024-05-01..2024-05-31"
+"""
 if __name__ == "__main__":
     GenerateReport(*sys.argv[1:4]).sum_by_author()

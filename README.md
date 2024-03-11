@@ -30,10 +30,18 @@ python3 gh_report.py REPO_OWNER REPO_NAME "DATE_RANGE"
 - REPO_NAME is the name of the repository.
 - DATE_RANGE is the date range for which the report will be generated. This should be in the format "YYYY-MM-DD..YYYY-MM-DD".
 
-## Example
+## Examples
+
+### One repository
 
 ```powershell
 python3 gh_report.py AGX-Software indiky-server "2024-05-01..2024-05-31"
+```
+
+### Multiple repositories
+
+```powershell
+python3 gh_report.py AGX-Software "indiky-server:core" "2024-05-01..2024-05-31"
 ```
 
 ## Output
